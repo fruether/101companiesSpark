@@ -15,7 +15,6 @@ public class TotalSQL {
   public void read_company_file(String path) {
       Dataset<Row> company = spark.read().json(path).toDF();
       company.createOrReplaceTempView("company");
-      company.printSchema();
   }
     public List<Object> getSalaries(List<Row> empRow) {
         List<Object> salaries = new ArrayList<>();
