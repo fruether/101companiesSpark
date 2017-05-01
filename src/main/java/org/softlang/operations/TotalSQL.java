@@ -4,13 +4,11 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import java.util.*;
-import org.apache.spark.sql.functions.*;
-import scala.collection.mutable.WrappedArray;
 
 /**
  * Created by freddy on 15.04.17.
  */
-public class Total {
+public class TotalSQL {
   private SparkSession spark;
   private String path = "files/sampleCompany.json";
 
@@ -59,7 +57,7 @@ public class Total {
       return total;
   }
 
-  public Total() {
+  public TotalSQL() {
        spark = SparkSession
               .builder()
               .appName("Java Spark SQL basic ")
@@ -67,7 +65,7 @@ public class Total {
               .getOrCreate();
 
   }
-    public Total(String path) {
+    public TotalSQL(String path) {
         spark = SparkSession
                 .builder()
                 .appName("Java Spark SQL basic ")
@@ -79,7 +77,7 @@ public class Total {
 
     public static void main(String [] args)  {
 
-       System.out.print(new Total().total());
+       System.out.print(new TotalSQL().total());
 
   }
 
