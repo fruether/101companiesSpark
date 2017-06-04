@@ -4,7 +4,7 @@
 ## Pre-requisites
 To start you need to get Maven installed
 
-### Compile, package and test
+## Compile, package and test
 ```
 $ mvn package
 ```
