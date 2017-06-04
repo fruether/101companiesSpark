@@ -7,7 +7,6 @@ To start you need to get Maven installed
 ### Compile, package and test
 ```
 $ mvn package
-...
 ```
 
 The result should show you:
